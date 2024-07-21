@@ -2,24 +2,21 @@
 
 import Thumbnail from '../Thumbnail/page'
 import LikeButton from '../LikeButton/page'
+import type  {TpVideo, VList} from '../MyTypes'
+
 
 import styles from "./page.module.css";
 
-type TpVideo = {
-    url: string,
-    title: string,
-    description: string
- }
 
-export default function Video( {video}  ) {
+export default function Video( video1: TpVideo ) {
     return (
       <div>
-        <Thumbnail video =  {video} />
-        <a href={video.url}>
-          <h3>{video.title}</h3>
-          <p>{video.description}</p>
+        <Thumbnail {...video1} />
+        <a href={video1.url}>
+          <h3>{video1.title}</h3>
+          <p>{video1.description}</p>
         </a>
-        <LikeButton video={video} />
+        <LikeButton {...video1} />
       </div>
     );
   }

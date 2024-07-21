@@ -1,14 +1,12 @@
 import styles from "./page.module.css";
+import type  {TpVideo, VList} from '../MyTypes'
 
-// type TpVideo = {
-//     url: string,
-//     title: string,
-//     description: string
-//  }
-export default function Thumbnail({video}) {
+export default function Thumbnail(video: TpVideo): JSX.Element {
     return (
       <div>
         <span>{video.url}</span>
       </div>
     );
   }
+
+

@@ -1,11 +1,11 @@
 import styles from "./page.module.css";
+import type  {TpVideo, VList} from '../MyTypes'
 
 
-
-export default function LikeButton({video}) {
+export default function LikeButton(video: TpVideo ) {
     return (
       <div>
-        <span>8</span>
+        <span>{video.url}</span>
       </div>
     );
   }
